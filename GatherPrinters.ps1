@@ -28,7 +28,7 @@ ForEach ($Row in $objPrinters){
 	echo Next...
 	}
 
-echo Ver3
+echo Ver4
 <#
 $Printers = [pscustomobject]@{
 	objPrinters = (@($objPrinters) -join ',')
