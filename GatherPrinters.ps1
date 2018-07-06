@@ -23,13 +23,17 @@ foreach ($objResult in $colResults)
 
 #$objPrinters
 
+$Printers=@()
 ForEach ($Row in $objPrinters){
-	echo $Row.Name
-	echo $Row.Driver
-	echo Next...
+	$Printers += ($Row.Name, $Row.Location, $Row.Driver, $Row.Server, $Row.Description)
 	}
 
-echo Ver5
+$Printers
+
+echo Ver6
+
+
+#$DisplayArray += (,($SpiltString[1], $Mailbox.Name, $MailUser.DeviceType, $MailUser.DeviceUserAgent, $MailUser.DeviceFriendlyName, $MailUser.LastSuccessSync))
 <#
 $Printers = [pscustomobject]@{
 	objPrinters = (@($objPrinters) -join ',')
