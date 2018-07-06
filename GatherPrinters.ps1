@@ -21,7 +21,7 @@ foreach ($objResult in $colResults)
  $objPrinters += $objptr
  }
 
-$objPrinters
+#$objPrinters
 
 $NumColsToExport = 4
 
@@ -32,6 +32,7 @@ ForEach ($Row in $objPrinters){
     $obj = New-Object PSObject
     For ($i=0;$i -lt $NumColsToExport; $i++){
               $obj | Add-Member -MemberType NoteProperty -Name $pNames[$i] -Value $Row[$i]
+      echo $i
       }
    $Printers+=$obj
    $obj=$Null
