@@ -1,5 +1,3 @@
-echo Out2...
-
 $strFilter = "(objectCategory=printQueue)"
 
 $objDomain = New-Object System.DirectoryServices.DirectoryEntry
@@ -29,6 +27,8 @@ ForEach ($Row in $objPrinters){
 	echo $Row
 	}
 
+
+echo Ver3
 <#
 $Printers = [pscustomobject]@{
 	objPrinters = (@($objPrinters) -join ',')
