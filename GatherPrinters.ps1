@@ -30,9 +30,6 @@ ForEach ($Row in $objPrinters){
 
 $Printers
 
-echo Ver6
-
-
 #$DisplayArray += (,($SpiltString[1], $Mailbox.Name, $MailUser.DeviceType, $MailUser.DeviceUserAgent, $MailUser.DeviceFriendlyName, $MailUser.LastSuccessSync))
 <#
 $Printers = [pscustomobject]@{
@@ -74,3 +71,4 @@ $Printers | ft name, driver, server, description
 Printers | export-csv Printers.csv -NTI
 Printers | ft name, driver, server, description
 
+echo Ver7
