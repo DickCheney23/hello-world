@@ -21,8 +21,9 @@ foreach ($objResult in $colResults)
  $objPrinters += $objptr
  }
 
-#$objPrinters
+$objPrinters
 
+<#
 $NumColsToExport = 4
 
 #Create array to hold the data to be sent to the CSV file
@@ -45,3 +46,6 @@ ForEach ($Row in $objPrinters){
 $Printers | export-csv Printers.csv -NTI
 
 $Printers | ft name, driver, server, description
+#>
+
+$objPrinters | ft name, driver, server, description
