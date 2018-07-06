@@ -30,7 +30,7 @@ $Printers = [pscustomobject]@{
 $Printers
 
 
-$OutArray |Select-Object Name,@{Expression={$_.objPrinters.Name -join ';'}} |Export-Csv test.csv
+$OutArray | Select-Object Name,@{Expression={$_.objPrinters.Name -join ';'}} | Export-Csv test.csv
 echo Out...
 $OutArray
 
