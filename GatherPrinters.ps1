@@ -25,8 +25,8 @@ foreach ($objResult in $colResults)
 
 ForEach ($Row in $objPrinters){
 	echo $Row
+	echo Next...
 	}
-
 
 echo Ver3
 <#
