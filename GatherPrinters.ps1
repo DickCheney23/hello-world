@@ -1,4 +1,4 @@
-echo Out...
+echo Out2...
 
 $strFilter = "(objectCategory=printQueue)"
 
@@ -23,7 +23,7 @@ foreach ($objResult in $colResults)
  $objPrinters += $objptr
  }
 
-$objPrinters
+#$objPrinters
 
 ForEach ($Row in $objPrinters){
 	echo $Row
