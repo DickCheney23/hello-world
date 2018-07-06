@@ -68,8 +68,9 @@ ForEach ($Row in $objPrinters){
 $Printers | export-csv Printers.csv -NTI
 
 $Printers | ft name, driver, server, description
+#>
 
 #Export the data to a CSV file
-$Printers | export-csv Printers.csv -NTI
-$Printers | ft name, driver, server, description
-#>
+Printers | export-csv Printers.csv -NTI
+Printers | ft name, driver, server, description
+
