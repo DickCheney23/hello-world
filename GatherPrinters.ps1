@@ -23,10 +23,10 @@ foreach ($objResult in $colResults)
 
 #$objPrinters
 
-echo nCreate Array...
+echo Create Array...
 $Printers=@()
 ForEach ($Row in $objPrinters){
-	$Printers += ($Row.Name, $Row.Location, $Row.Driver, $Row.Server, $Row.Description)
+	$Printers += $Row.Name, $Row.Location, $Row.Driver, $Row.Server, $Row.Description
 	}
 
 echo Printers...
@@ -73,4 +73,4 @@ $Printers | ft name, driver, server, description
 $Printers | export-csv Printers.csv -NTI
 $Printers | ft Name, Driver, Server, Description
 
-echo Ver9
+echo Ver10
