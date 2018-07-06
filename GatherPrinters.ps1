@@ -23,11 +23,13 @@ foreach ($objResult in $colResults)
 
 #$objPrinters
 
+echo nCreate Array...
 $Printers=@()
 ForEach ($Row in $objPrinters){
 	$Printers += ($Row.Name, $Row.Location, $Row.Driver, $Row.Server, $Row.Description)
 	}
 
+echo Printers...
 $Printers
 
 #$DisplayArray += (,($SpiltString[1], $Mailbox.Name, $MailUser.DeviceType, $MailUser.DeviceUserAgent, $MailUser.DeviceFriendlyName, $MailUser.LastSuccessSync))
@@ -69,6 +71,6 @@ $Printers | ft name, driver, server, description
 
 #Export the data to a CSV file
 $Printers | export-csv Printers.csv -NTI
-$Printers | ft name, driver, server, description
+$Printers | ft Name, Driver, Server, Description
 
-echo Ver8
+echo Ver9
