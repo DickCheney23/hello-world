@@ -33,6 +33,7 @@ ForEach ($Row in $objPrinters){
     For ($i=0;$i -lt $NumColsToExport; $i++){
               $obj | Add-Member -MemberType NoteProperty -Name $pNames[$i] -Value $Row[$i]
       echo $i
+      echo $Row[$i]
       }
    $Printers+=$obj
    $obj=$Null
