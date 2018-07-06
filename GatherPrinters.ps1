@@ -25,6 +25,11 @@ foreach ($objResult in $colResults)
 
 $objPrinters
 
+ForEach ($Row in $objPrinters){
+	echo $Row
+	}
+
+<#
 $Printers = [pscustomobject]@{
 	objPrinters = (@($objPrinters) -join ',')
 	}
@@ -36,7 +41,6 @@ $OutArray | Select-Object Name,@{Expression={$_.objPrinters.Name -join ';'}} | E
 echo Out...
 $OutArray
 
-<#
 $NumColsToExport = 4
 
 #Create array to hold the data to be sent to the CSV file
@@ -59,8 +63,8 @@ ForEach ($Row in $objPrinters){
 $Printers | export-csv Printers.csv -NTI
 
 $Printers | ft name, driver, server, description
-#>
 
 #Export the data to a CSV file
 $Printers | export-csv Printers.csv -NTI
 $Printers | ft name, driver, server, description
+#>
