@@ -48,4 +48,6 @@ $Printers | export-csv Printers.csv -NTI
 $Printers | ft name, driver, server, description
 #>
 
+#Export the data to a CSV file
+$objPrinters | export-csv Printers.csv -NTI
 $objPrinters | ft name, driver, server, description
