@@ -24,11 +24,12 @@ foreach ($objResult in $colResults)
 #$objPrinters
 
 ForEach ($Row in $objPrinters){
-	echo $Row
+	echo $Row.Name
+	echo $Row.Driver
 	echo Next...
 	}
 
-echo Ver4
+echo Ver5
 <#
 $Printers = [pscustomobject]@{
 	objPrinters = (@($objPrinters) -join ',')
