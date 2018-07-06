@@ -38,7 +38,7 @@ ForEach ($Row in $objPrinters){
    $obj=$Null
 }
 
-$Printers
+#$Printers
 
 #Export the data to a CSV file
 $Printers | export-csv Printers.csv -NTI
