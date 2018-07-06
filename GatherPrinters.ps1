@@ -1,3 +1,5 @@
+echo Out...
+
 $strFilter = "(objectCategory=printQueue)"
 
 $objDomain = New-Object System.DirectoryServices.DirectoryEntry
