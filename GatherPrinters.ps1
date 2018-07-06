@@ -23,8 +23,9 @@ foreach ($objResult in $colResults)
 
 $objPrinters
 
-$Printers = [pscustomobject]@{ objPrinter = (@($objPrinters) -join ',')
-}
+$Printers = [pscustomobject]@{
+	objPrinters = (@($objPrinters) -join ',')
+	}
 
 $Printers
 
